@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mtc://rhythm/theory_primitives/0.1.0",
+  "title": "Rhythm Theory Primitives",
+  "type": "object",
+  "required": ["mtc_schema", "student", "notes_played"],
+  "properties": {
+    "mtc_schema": { "const": "rhythm_theory/0.1.0" },
+    "student": {
+      "type": "object",
+      "description": "Runtime state describing faculties and learning stance"
+    },
+    "notes_played": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["time", "length", "velocity"],
+        "properties": {
+          "time": { "type": "number", "minimum": 0 },
+          "length": { "type": "number", "minimum": 0 },
+          "velocity": { "type": "number", "minimum": 0, "maximum": 127 }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
