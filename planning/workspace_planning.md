@@ -19,10 +19,10 @@
 ---
 
 ## Sub-steps
-- [ ] `step_1/` → container for maker modules
-- [ ] `step_1_1/` → first branch of maker steps
-- [ ] `step_1_1_1/` → sub-branch
-- [ ] `step_1_1_1_1/` → runnable node (UI code + state management)
+
+- [ ] `step_1/` → first container for maker modules
+- [ ] `step_2/` → second container (future expansion)
+- [ ] `step_3/` → third container (future expansion)
 
 ---
 
@@ -43,7 +43,7 @@
 ## Roadmap (workspace build steps)
 
 1. **Scaffold**
-   - Ensure 4-layer cascade exists: `step_1/step_1_1/step_1_1_1/step_1_1_1_1/`
+   - Ensure 4-layer cascade exists: `step_1/step_1_1/step_1_1_1/`
    - Deepest node contains: `planning.md`, `story.md`, `code.py`, `json/`
 
 2. **Define input contracts**
@@ -58,6 +58,7 @@
 
 4. **Compose project state**
    - Merge artifacts into `project` dict with challenge ledger:
+
      ```json
      { "maker": "thorn", "version": "1.0.0", "created": "<iso>", "challenges": [] }
      ```
